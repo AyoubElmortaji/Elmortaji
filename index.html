@@ -1,0 +1,144 @@
+<!-- README: Cybersecurity & Cloud Computing portfolio for Ayoub ELMORTAJI. Open this file directly in your browser. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ayoub ELMORTAJI — Cybersecurity & Cloud Computing portfolio. SOC, cloud, and security engineering projects.">
+  <meta name="keywords" content="cybersecurity, cloud computing, SOC, SIEM, OT, SCADA, portfolio">
+  <meta name="author" content="Ayoub ELMORTAJI">
+  <title>Ayoub ELMORTAJI | Cybersecurity & Cloud Computing</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <canvas class="canvas-layer" data-canvas aria-hidden="true"></canvas>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <header class="navbar">
+    <div class="brand">Ayoub ELMORTAJI</div>
+    <nav aria-label="Primary">
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="awards.html">Awards</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+    <div class="nav-actions">
+      <button class="toggle" type="button" data-scanlines-toggle aria-label="Toggle scanlines">Scanlines</button>
+      <button class="toggle" type="button" data-terminal-toggle aria-label="Toggle terminal mode">Terminal</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="container hero">
+      <div class="hero-card">
+        <p class="badge">Engineering Student — Cybersecurity & Cloud Computing</p>
+        <h1 class="hero-title glitch" data-text="Ayoub ELMORTAJI">Ayoub ELMORTAJI</h1>
+        <p class="hero-subtitle">Seeking Final Year Internship (PFA) starting June 2026 · Mohammedia, Morocco</p>
+        <div class="cta-group">
+          <a class="btn primary" href="projects.html">View Projects</a>
+          <a class="btn" href="cv.pdf" download>Download CV</a>
+        </div>
+        <div class="hero-metrics">
+          <div class="metric">
+            <h3>Top 1%</h3>
+            <p>TryHackMe</p>
+          </div>
+          <div class="metric">
+            <h3>Top 3%</h3>
+            <p>Blue Team HOLMES</p>
+          </div>
+          <div class="metric">
+            <h3>2nd Place</h3>
+            <p>SecureIT CTF 2025</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <ul>
+          <li><span>FOCUS</span> SOC Operations · Incident Response · CTI</li>
+          <li><span>STACK</span> Wazuh · Splunk · Elastic · EDR</li>
+          <li><span>CLOUD</span> AWS · Oracle OCI · IAM · Logging</li>
+          <li><span>DEVOPS</span> Docker · Terraform · Ansible · Proxmox</li>
+          <li><span>CONTACT</span> elmortaji.ayoub@ensam-casa.ma</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title"><span>Profile</span> Mission Brief</div>
+        <div class="card-grid">
+          <article class="card">
+            <div class="tag">Cyber Defense</div>
+            <h3>Threat-Focused Engineering</h3>
+            <p class="muted">Designing security telemetry pipelines, analytics, and automation for SOC-scale visibility.</p>
+          </article>
+          <article class="card">
+            <div class="tag">Cloud</div>
+            <h3>Cloud Security Architecture</h3>
+            <p class="muted">Implementing IAM, segmentation, and logging across AWS and Oracle OCI environments.</p>
+          </article>
+          <article class="card">
+            <div class="tag">OT</div>
+            <h3>Industrial Cyber Resilience</h3>
+            <p class="muted">Building deception strategies aligned with IEC 62443 and Purdue model defense-in-depth.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title"><span>Highlights</span> Experience Snapshot</div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>Cybersecurity Engineering Intern · JESA S.A — Casablanca</h3>
+            <p class="muted">OT / SCADA Cyber Deception Framework · July – August 2025</p>
+            <p>Industrial honeypots, Wazuh + Suricata monitoring, OpenCTI intelligence, and pentesting automation.</p>
+          </div>
+          <div class="timeline-item">
+            <h3>ENSAM Casablanca · Engineering Cycle (2nd Year)</h3>
+            <p class="muted">Cybersecurity & Cloud Computing · 2024 – 2027</p>
+            <p>Advanced systems security, cloud architecture, SOC operations, and ML-driven detection.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-links">
+      <a href="https://github.com/AyoubElmortaji" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/ayoub-elmortaji-805ab1250" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a href="mailto:elmortaji.ayoub@ensam-casa.ma">Email</a>
+    </div>
+  </footer>
+
+  <div class="terminal-overlay" role="dialog" aria-label="Terminal mode">
+    <div class="terminal-header">
+      Terminal Mode
+      <span>ESC</span>
+    </div>
+    <div class="terminal-body" data-terminal-body></div>
+    <div class="terminal-input">
+      <span>&gt;</span>
+      <input type="text" data-terminal-input aria-label="Terminal input" placeholder="Type a command">
+    </div>
+  </div>
+
+  <div class="palette" role="dialog" aria-label="Command palette">
+    <div class="palette-panel">
+      <input type="text" data-palette-input placeholder="Type to navigate..." aria-label="Command palette input">
+      <div class="palette-results" data-palette-results></div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
