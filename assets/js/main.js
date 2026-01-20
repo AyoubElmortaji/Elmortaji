@@ -8,6 +8,8 @@ const palette = document.querySelector('.palette');
 const paletteInput = document.querySelector('[data-palette-input]');
 const paletteResults = document.querySelector('[data-palette-results]');
 const canvas = document.querySelector('[data-canvas]');
+const navToggle = document.querySelector('[data-nav-toggle]');
+const navLinks = document.querySelector('.nav-links');
 
 const paletteActions = [
   { label: 'Home', href: 'index.html' },
@@ -40,6 +42,21 @@ if (scanlinesToggle && scanlines) {
     scanlines.classList.toggle('hidden');
   });
 }
+
+if (navToggle) {
+  navToggle.addEventListener('click', () => {
+    document.body.classList.toggle('nav-open');
+    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', String(!expanded));
+  });
+}
+
+navLinks?.addEventListener('click', (event) => {
+  if (event.target.tagName === 'A') {
+    document.body.classList.remove('nav-open');
+    navToggle?.setAttribute('aria-expanded', 'false');
+  }
+});
 
 if (terminalToggle && terminal) {
   terminalToggle.addEventListener('click', () => {
@@ -123,6 +140,8 @@ document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
     closePalette();
     terminal?.classList.remove('active');
+    document.body.classList.remove('nav-open');
+    navToggle?.setAttribute('aria-expanded', 'false');
   }
 });
 
