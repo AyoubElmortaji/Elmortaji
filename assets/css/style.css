@@ -1,18 +1,18 @@
 :root {
-  --bg: #05060f;
-  --bg-elevated: rgba(10, 16, 30, 0.82);
-  --surface: rgba(13, 22, 41, 0.78);
-  --border: rgba(92, 214, 255, 0.18);
-  --text: #e9f2ff;
-  --muted: #a9bed8;
-  --accent: #5ce6ff;
-  --accent-strong: #63ffa7;
-  --violet: #7c6cff;
-  --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-  --radius-lg: 20px;
-  --radius-md: 14px;
+  --bg: #f7f8fb;
+  --bg-alt: #ffffff;
+  --surface: #eef2f7;
+  --border: #dbe5f1;
+  --text: #1f2a44;
+  --muted: #5f6f86;
+  --accent: #2f6bff;
+  --accent-2: #3cd6b9;
+  --accent-3: #ff8a5c;
+  --shadow: 0 18px 45px rgba(33, 54, 99, 0.12);
+  --radius-lg: 22px;
+  --radius-md: 16px;
   --radius-sm: 10px;
-  --nav-height: 70px;
+  --nav-height: 72px;
 }
 
 * {
@@ -27,9 +27,8 @@ html {
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: radial-gradient(circle at top left, rgba(92, 230, 255, 0.08), transparent 45%),
-    radial-gradient(circle at top right, rgba(124, 108, 255, 0.1), transparent 40%),
-    #05060f;
+  background: linear-gradient(180deg, rgba(47, 107, 255, 0.08), rgba(60, 214, 185, 0.08) 35%, rgba(255, 255, 255, 1) 70%),
+    var(--bg);
   color: var(--text);
   min-height: 100vh;
   line-height: 1.6;
@@ -40,14 +39,8 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: linear-gradient(180deg, rgba(6, 10, 20, 0.8), rgba(5, 6, 15, 0.95)),
-    repeating-linear-gradient(
-      90deg,
-      rgba(92, 230, 255, 0.04),
-      rgba(92, 230, 255, 0.04) 1px,
-      transparent 1px,
-      transparent 48px
-    );
+  background: radial-gradient(circle at top right, rgba(47, 107, 255, 0.12), transparent 45%),
+    radial-gradient(circle at 20% 20%, rgba(60, 214, 185, 0.16), transparent 35%);
   pointer-events: none;
   z-index: 0;
 }
@@ -93,7 +86,7 @@ textarea {
   height: auto;
   padding: 8px 12px;
   background: var(--accent);
-  color: #02151d;
+  color: #ffffff;
   border-radius: var(--radius-sm);
   z-index: 1000;
 }
@@ -108,16 +101,16 @@ textarea {
   align-items: center;
   justify-content: space-between;
   padding: 0 6vw;
-  background: rgba(6, 12, 24, 0.8);
-  border-bottom: 1px solid rgba(92, 230, 255, 0.12);
-  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(16px);
   z-index: 120;
 }
 
 .brand {
   font-weight: 700;
   font-size: 1rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
 }
 
@@ -137,7 +130,7 @@ textarea {
 .nav-links a:hover,
 .nav-links a:focus {
   color: var(--text);
-  background: rgba(92, 230, 255, 0.15);
+  background: rgba(47, 107, 255, 0.12);
 }
 
 .nav-actions {
@@ -148,8 +141,8 @@ textarea {
 
 .nav-toggle {
   display: none;
-  background: rgba(92, 230, 255, 0.2);
-  border: 1px solid rgba(92, 230, 255, 0.4);
+  background: rgba(47, 107, 255, 0.12);
+  border: 1px solid rgba(47, 107, 255, 0.3);
   padding: 8px 14px;
   border-radius: 999px;
   font-size: 0.85rem;
@@ -157,8 +150,8 @@ textarea {
 }
 
 .toggle {
-  background: rgba(92, 230, 255, 0.12);
-  border: 1px solid rgba(92, 230, 255, 0.35);
+  background: rgba(47, 107, 255, 0.1);
+  border: 1px solid rgba(47, 107, 255, 0.25);
   padding: 6px 12px;
   border-radius: 999px;
   cursor: pointer;
@@ -168,7 +161,7 @@ textarea {
 
 .toggle:hover,
 .toggle:focus {
-  box-shadow: 0 0 18px rgba(92, 230, 255, 0.3);
+  box-shadow: 0 10px 20px rgba(47, 107, 255, 0.18);
 }
 
 main {
@@ -211,12 +204,11 @@ main {
 }
 
 .hero-card {
-  background: var(--surface);
+  background: var(--bg-alt);
   border: 1px solid var(--border);
   padding: 34px;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(8px);
 }
 
 .hero-title {
@@ -250,21 +242,22 @@ main {
   padding: 10px 18px;
   border-radius: 999px;
   border: 1px solid transparent;
-  background: rgba(92, 230, 255, 0.12);
+  background: rgba(47, 107, 255, 0.1);
   color: var(--text);
   font-weight: 600;
   transition: all 0.25s ease;
 }
 
 .btn.primary {
-  background: linear-gradient(120deg, rgba(92, 230, 255, 0.35), rgba(124, 108, 255, 0.25));
-  border: 1px solid rgba(92, 230, 255, 0.6);
+  background: linear-gradient(120deg, rgba(47, 107, 255, 0.9), rgba(60, 214, 185, 0.9));
+  border: 1px solid rgba(47, 107, 255, 0.4);
+  color: #ffffff;
 }
 
 .btn:hover,
 .btn:focus {
   transform: translateY(-2px);
-  box-shadow: 0 12px 24px rgba(92, 230, 255, 0.2);
+  box-shadow: 0 12px 24px rgba(47, 107, 255, 0.18);
 }
 
 .hero-metrics {
@@ -275,8 +268,8 @@ main {
 }
 
 .metric {
-  background: rgba(10, 16, 30, 0.85);
-  border: 1px solid rgba(92, 230, 255, 0.2);
+  background: var(--surface);
+  border: 1px solid var(--border);
   padding: 16px;
   border-radius: var(--radius-md);
   text-align: left;
@@ -293,8 +286,8 @@ main {
 }
 
 .card {
-  background: var(--bg-elevated);
-  border: 1px solid rgba(92, 230, 255, 0.12);
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 20px;
   box-shadow: var(--shadow);
@@ -303,7 +296,7 @@ main {
 
 .card:hover {
   transform: translateY(-4px);
-  border-color: rgba(92, 230, 255, 0.4);
+  border-color: rgba(47, 107, 255, 0.35);
 }
 
 .card .tag {
@@ -312,7 +305,7 @@ main {
   font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--accent-strong);
+  color: var(--accent-3);
 }
 
 .badge {
@@ -321,8 +314,8 @@ main {
   gap: 8px;
   padding: 8px 14px;
   border-radius: 999px;
-  border: 1px solid rgba(92, 230, 255, 0.3);
-  background: rgba(10, 16, 30, 0.7);
+  border: 1px solid rgba(47, 107, 255, 0.2);
+  background: rgba(47, 107, 255, 0.08);
   font-size: 0.85rem;
 }
 
@@ -333,9 +326,10 @@ main {
 
 .timeline-item {
   padding: 22px;
-  border-left: 3px solid rgba(92, 230, 255, 0.45);
-  background: rgba(10, 16, 30, 0.85);
+  border-left: 3px solid rgba(47, 107, 255, 0.45);
+  background: var(--bg-alt);
   border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
 }
 
 .project-search {
@@ -351,8 +345,8 @@ main {
   min-width: 200px;
   padding: 10px 14px;
   border-radius: var(--radius-sm);
-  border: 1px solid rgba(92, 230, 255, 0.3);
-  background: rgba(10, 16, 30, 0.85);
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
 }
 
 .filters {
@@ -364,22 +358,22 @@ main {
 .filter-btn {
   padding: 8px 14px;
   border-radius: 999px;
-  border: 1px solid rgba(92, 230, 255, 0.3);
-  background: rgba(10, 16, 30, 0.85);
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
   cursor: pointer;
   transition: all 0.25s ease;
   font-size: 0.85rem;
 }
 
 .filter-btn.active {
-  background: rgba(92, 230, 255, 0.25);
+  background: rgba(47, 107, 255, 0.18);
   color: var(--text);
-  box-shadow: 0 8px 18px rgba(92, 230, 255, 0.2);
+  box-shadow: 0 8px 18px rgba(47, 107, 255, 0.18);
 }
 
 .footer {
   padding: 40px 0;
-  border-top: 1px solid rgba(92, 230, 255, 0.12);
+  border-top: 1px solid var(--border);
   margin-top: 40px;
   position: relative;
   z-index: 10;
@@ -398,13 +392,13 @@ main {
   pointer-events: none;
   background: repeating-linear-gradient(
     to bottom,
-    rgba(255, 255, 255, 0.025),
-    rgba(255, 255, 255, 0.025) 1px,
+    rgba(0, 0, 0, 0.03),
+    rgba(0, 0, 0, 0.03) 1px,
     transparent 1px,
-    transparent 4px
+    transparent 6px
   );
-  mix-blend-mode: soft-light;
-  opacity: 0.2;
+  mix-blend-mode: multiply;
+  opacity: 0.12;
   z-index: 5;
 }
 
@@ -417,10 +411,10 @@ main {
   right: 24px;
   bottom: 24px;
   width: min(360px, 85vw);
-  background: rgba(7, 12, 22, 0.95);
-  border: 1px solid rgba(92, 230, 255, 0.3);
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  box-shadow: 0 0 24px rgba(92, 230, 255, 0.25);
+  box-shadow: var(--shadow);
   z-index: 140;
   display: none;
   flex-direction: column;
@@ -432,7 +426,7 @@ main {
 
 .terminal-header {
   padding: 12px 16px;
-  border-bottom: 1px solid rgba(92, 230, 255, 0.2);
+  border-bottom: 1px solid var(--border);
   font-weight: 600;
   display: flex;
   justify-content: space-between;
@@ -452,7 +446,7 @@ main {
   align-items: center;
   gap: 8px;
   padding: 12px 16px;
-  border-top: 1px solid rgba(92, 230, 255, 0.2);
+  border-top: 1px solid var(--border);
 }
 
 .terminal-input input {
@@ -465,7 +459,7 @@ main {
 .palette {
   position: fixed;
   inset: 0;
-  background: rgba(2, 4, 12, 0.7);
+  background: rgba(31, 42, 68, 0.2);
   display: none;
   align-items: center;
   justify-content: center;
@@ -478,10 +472,10 @@ main {
 
 .palette-panel {
   width: min(520px, 90vw);
-  background: rgba(8, 14, 28, 0.95);
-  border: 1px solid rgba(92, 230, 255, 0.4);
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  box-shadow: 0 0 24px rgba(92, 230, 255, 0.35);
+  box-shadow: var(--shadow);
   padding: 18px;
 }
 
@@ -489,8 +483,8 @@ main {
   width: 100%;
   padding: 10px 14px;
   border-radius: var(--radius-sm);
-  border: 1px solid rgba(92, 230, 255, 0.3);
-  background: rgba(8, 14, 28, 0.9);
+  border: 1px solid var(--border);
+  background: #ffffff;
   margin-bottom: 12px;
 }
 
@@ -500,8 +494,8 @@ main {
 }
 
 .palette-results button {
-  background: rgba(12, 20, 38, 0.8);
-  border: 1px solid rgba(92, 230, 255, 0.2);
+  background: var(--surface);
+  border: 1px solid var(--border);
   padding: 10px 12px;
   border-radius: var(--radius-sm);
   text-align: left;
@@ -513,15 +507,15 @@ main {
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  opacity: 0.2;
+  opacity: 0.08;
 }
 
 .hero-visual {
   position: relative;
   padding: 30px;
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(124, 108, 255, 0.35);
-  background: linear-gradient(160deg, rgba(13, 22, 41, 0.92), rgba(7, 12, 24, 0.95));
+  border: 1px solid var(--border);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(238, 242, 247, 0.95));
   box-shadow: var(--shadow);
 }
 
@@ -537,7 +531,7 @@ main {
 }
 
 .hero-visual span {
-  color: var(--accent-strong);
+  color: var(--accent);
   font-size: 0.85rem;
   letter-spacing: 0.2em;
 }
@@ -555,10 +549,10 @@ main {
 
 .architecture-node {
   padding: 14px;
-  border: 1px dashed rgba(92, 230, 255, 0.35);
+  border: 1px dashed rgba(47, 107, 255, 0.35);
   border-radius: var(--radius-sm);
   text-align: center;
-  background: rgba(10, 16, 30, 0.85);
+  background: var(--surface);
 }
 
 .form {
@@ -574,8 +568,8 @@ main {
 .copy-btn {
   padding: 8px 12px;
   border-radius: 999px;
-  border: 1px solid rgba(92, 230, 255, 0.35);
-  background: rgba(10, 16, 30, 0.8);
+  border: 1px solid rgba(47, 107, 255, 0.3);
+  background: rgba(47, 107, 255, 0.08);
   cursor: pointer;
   font-size: 0.8rem;
 }
@@ -586,8 +580,8 @@ main {
     top: calc(var(--nav-height) + 10px);
     right: 16px;
     left: 16px;
-    background: rgba(6, 12, 24, 0.95);
-    border: 1px solid rgba(92, 230, 255, 0.2);
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid var(--border);
     border-radius: var(--radius-md);
     padding: 18px;
     display: grid;
@@ -607,7 +601,7 @@ main {
   .nav-links a {
     padding: 12px 14px;
     border-radius: var(--radius-sm);
-    background: rgba(12, 20, 38, 0.7);
+    background: rgba(47, 107, 255, 0.08);
   }
 
   .nav-toggle {
